@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/Avatars">
+        <file>assets/ajouter-un-ami.png</file>
+        <file>assets/bats-toi.png</file>
+        <file>assets/chapeau-de-pere-noel.png</file>
+        <file>assets/copain (1).png</file>
+        <file>assets/copain.png</file>
+        <file>assets/fille.png</file>
+        <file>assets/grand-pere (1).png</file>
+        <file>assets/grand-pere.png</file>
+        <file>assets/grands-parents.png</file>
+        <file>assets/guarani (1).png</file>
+        <file>assets/guarani.png</file>
+        <file>assets/masque.png</file>
+        <file>assets/moustache.png</file>
+        <file>assets/pere.png</file>
+        <file>assets/pere-noel.png</file>
+        <file>assets/posture-de-yoga.png</file>
+        <file>assets/selfie.png</file>
+        <file>assets/supprimer-un-ami.png</file>
+        <file>assets/traineau.png</file>
+    </qresource>
+    <qresource prefix="/docs">
+        <file>rules of the game/Checkers.html</file>
+        <file>rules of the game/Go.html</file>
+        <file>rules of the game/TicTacToe.html</file>
+    </qresource>
+</RCC>

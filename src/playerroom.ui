@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayerRoom</class>
+ <widget class="QWidget" name="PlayerRoom">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>783</width>
+    <height>711</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background: transparent;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="PlayerStatistics" name="widgetGameSeat2" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="isRevert" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QStackedWidget" name="stackedWidgetRoom">
+     <property name="minimumSize">
+      <size>
+       <width>300</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageWaitinRoom">
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButtonPlay">
+         <property name="text">
+          <string>Play</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QComboBox" name="comboBoxGameCatalog">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    background-color: #4a4a4d; /* Fond légèrement plus clair */
+    color: #f0f0f0;           /* Texte clair */
+    border: 1px solid #6a6a6d; /* Bordure subtile et un peu plus claire */
+    border-radius: 5px;        /* Coins arrondis */
+    padding: 5px;              /* Espacement interne */
+    font-size: 14px;
+}
+QComboBox:hover {
+    border: 1px solid #9ab3f5; /* Bordure bleue plus lumineuse au survol */
+    background-color: #5a5a5d; /* Fond légèrement plus lumineux */
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;              /* Taille du bouton déroulant */
+    border-left: 1px solid #6a6a6d; /* Séparateur */
+    background-color: #4a4a4d; /* Fond clair pour le bouton déroulant */
+    border-top-right-radius: 5px; /* Coins arrondis en haut à droite */
+    border-bottom-right-radius: 5px; /* Coins arrondis en bas à droite */
+}
+QComboBox QAbstractItemView {
+    background-color: #4a4a4d; /* Fond de la liste déroulante */
+    border: 1px solid #6a6a6d; /* Bordure subtile */
+    color: #f0f0f0;            /* Texte clair */
+    selection-background-color: #6a6a6d; /* Fond pour les éléments sélectionnés */
+    selection-color: #ffffff;  /* Texte clair pour les éléments sélectionnés */
+    border-radius: 5px;        /* Coins arrondis pour la liste */
+}
+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTextEdit" name="textEditRules">
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+    border: 2px solid #cccccc; /* Bordure grise */
+    border-radius: 15px; /* Angles arrondis */
+    color: #333333; /* Couleur du texte */
+    padding: 5px; /* Espacement interne */
+}
+
+QTextEdit QScrollBar {
+    width: 0px; /* Supprime les barres de défilement */
+    height: 0px;
+}
+</string>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageGame">
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QGraphicsView" name="graphicsView"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>598</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButtonCreatBot">
+        <property name="text">
+         <string>Play with bot</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButtonAddPlayer">
+        <property name="text">
+         <string>Add player</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="PlayerStatistics" name="widgetGameSeat1" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="isRevert" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlayerStatistics</class>
+   <extends>QWidget</extends>
+   <header>playerstatistics.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayerStatistics</class>
+ <widget class="QWidget" name="PlayerStatistics">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>174</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="commandLayout">
+     <item>
+      <widget class="QPushButton" name="pushButtonShowInformations">
+       <property name="text">
+        <string>Player Informations</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonHideInformations">
+       <property name="visible">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Player Informations</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="status">
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelStatus">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <widget class="QWidget" name="widgetPlayerInformation" native="true">
+     <property name="visible">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="2">
+       <widget class="QLabel" name="labelTotalGamePlayed">
+        <property name="text">
+         <string>Total games played</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelWonGame">
+        <property name="text">
+         <string>Won games</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="4">
+       <widget class="QProgressBar" name="progressBarLukoMeter">
+        <property name="value">
+         <number>24</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="format">
+         <string>Luck-o-meter -&gt; %p%</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLineEdit" name="lineEditFirstName"/>
+      </item>
+      <item row="0" column="2" colspan="2">
+       <widget class="QLineEdit" name="lineEditLastName"/>
+      </item>
+      <item row="0" column="4" rowspan="4">
+       <widget class="QLabel" name="labelMiniPicture">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="ressources/ressources.qrc">:/Avatars/assets/chapeau-de-pere-noel.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="lcdNumberWonGames">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #333333; /* Couleur du texte */
+    background-color: #f0f0f0; /* Couleur d'arrière-plan */
+    border: 1px solid #cccccc; /* Bordure subtile */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 8px 12px; /* Espacement interne */
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif; /* Police moderne */
+    font-size: 14px; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    min-width: 100px; /* Largeur minimale */
+}
+
+QLabel:hover {
+    background-color: #e6e6e6; /* Couleur au survol */
+    border-color: #999999; /* Changement de la bordure au survol */
+}
+
+QLabel:disabled {
+    color: #aaaaaa; /* Couleur du texte désactivé */
+    background-color: #f9f9f9; /* Couleur d'arrière-plan désactivée */
+    border-color: #dddddd; /* Bordure désactivée */
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="lcdNumberTotalGames">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #333333; /* Couleur du texte */
+    background-color: #f0f0f0; /* Couleur d'arrière-plan */
+    border: 1px solid #cccccc; /* Bordure subtile */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 8px 12px; /* Espacement interne */
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif; /* Police moderne */
+    font-size: 14px; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    min-width: 100px; /* Largeur minimale */
+}
+
+QLabel:hover {
+    background-color: #e6e6e6; /* Couleur au survol */
+    border-color: #999999; /* Changement de la bordure au survol */
+}
+
+QLabel:disabled {
+    color: #aaaaaa; /* Couleur du texte désactivé */
+    background-color: #f9f9f9; /* Couleur d'arrière-plan désactivée */
+    border-color: #dddddd; /* Bordure désactivée */
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QWidget" name="widgetPicture" native="true">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="labelMainPicture">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="ressources/ressources.qrc">:/Avatars/assets/chapeau-de-pere-noel.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="ressources/ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonShowInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonHideInformations</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>45</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonHideInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonShowInformations</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonShowInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetPlayerInformation</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonHideInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetPlayerInformation</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonShowInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonShowInformations</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>28</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonHideInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonHideInformations</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>196</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonShowInformations</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetPicture</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

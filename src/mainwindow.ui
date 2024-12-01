@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ===== Style général ===== */
+QMainWindow {
+    background-color: #2d2d30;  /* Fond sobre et moderne */
+    border: 1px solid #3e3e40; /* Bordure fine et discrète */
+    border-radius: 10px;       /* Coins arrondis élégants */
+    padding: 15px;
+    color: #e0e0e0;            /* Texte gris clair pour une bonne lisibilité */
+}
+
+QWidget#centralwidget {
+    background-color: transparent;  /* Fond sobre et moderne */
+}
+
+/* ===== QLabel ===== */
+QLabel {
+    font-size: 13px;
+    font-weight: bold;         /* Texte légèrement mis en valeur */
+    color: #dcdcdc;
+    margin: 5px 0;
+}
+
+/* ===== QLineEdit ===== */
+QLineEdit {
+    background-color: #39393d; /* Fond sombre et uni */
+    border: 1px solid #5a5a5d; /* Bordure subtile */
+    border-radius: 5px;        /* Coins légèrement arrondis */
+    color: #e0e0e0;            /* Texte clair */
+    padding: 5px;
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border: 1px solid #6fa3ef; /* Bordure bleue moderne au focus */
+    background-color: #3f3f43; /* Fond légèrement plus clair */
+}
+
+/* ===== QPushButton ===== */
+QPushButton {
+    background-color: #454547; /* Bouton sobre et uniforme */
+    color: #e0e0e0;            /* Texte clair */
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #5a5a5d; /* Bordure subtile */
+    border-radius: 5px;        /* Coins arrondis */
+    padding: 7px 15px;
+}
+QPushButton:hover {
+    background-color: #565659; /* Fond plus clair au survol */
+}
+QPushButton:pressed {
+    background-color: #666669; /* Fond encore plus clair au clic */
+}
+QPushButton:disabled {
+    background-color: #3c3c3f; /* Fond désaturé pour boutons désactivés */
+    color: #8a8a8c;
+}
+
+/* Bouton spécifique pour OK */
+QPushButton#pushButtonOk {
+    background-color: #3a875e; /* Vert moderne */
+    border: 1px solid #469e6d;
+}
+QPushButton#pushButtonOk:hover {
+    background-color: #41a173; /* Vert plus lumineux au survol */
+}
+QPushButton#pushButtonOk:pressed {
+    background-color: #369462; /* Vert plus sombre au clic */
+}
+
+/* Bouton spécifique pour Cancel */
+QPushButton#pushButtonCancel {
+    background-color: #8b3b3b; /* Rouge doux */
+    border: 1px solid #a04c4c;
+}
+QPushButton#pushButtonCancel:hover {
+    background-color: #a04c4c; /* Rouge plus lumineux au survol */
+}
+QPushButton#pushButtonCancel:pressed {
+    background-color: #7b3535; /* Rouge plus sombre au clic */
+}
+
+QLabel#labelWarningPassword {
+    color: #8b3b3b; /* Rouge doux */
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QWidget" name="widgetBackgroundRounded_2" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#widgetBackgroundRounded_2 {
+    background: rgba(255, 255, 255, 80); /* Couleur vert semi-transparent (#3a875e) */
+    border: none;                       /* Pas de bordure */
+    border-radius: 15px;                /* Coins arrondis */
+}
+</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="2">
+        <widget class="StatusWidget" name="widgetStatusPicture" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelHeaderPicture">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="ressources/ressources.qrc">:/Avatars/assets/pere-noel.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButtonBack">
+         <property name="text">
+          <string>&lt; Back</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QWidget" name="widgetCentralView" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#widgetPlayRoom_2 {
+    background: rgb(157, 157, 185); /* Couleur vert semi-transparent (#3a875e) */
+    border: none;                       /* Pas de bordure */
+    border-radius: 15px;                /* Coins arrondis */
+}
+</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="CreateRoom">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButtonMyRoom">
+             <property name="text">
+              <string>Go to my room</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButtonJoinRoom">
+             <property name="text">
+              <string>Join a room</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="JoinRoom">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QTreeView" name="treeViewRooms">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTreeView {
+    background-color: #ffffff; /* Fond blanc */
+    border: 1px solid #cccccc; /* Bordure grise discrète */
+    border-radius: 15px; /* Bords arrondis */
+    font-size: 12px;
+    color: #333333; /* Couleur du texte */
+}
+
+QTreeView::item {
+    padding-left: 10px; /* Indentation des items */
+}
+
+QTreeView::item:selected {
+    background-color: #3a875e; /* Couleur de sélection vert */
+    color: white; /* Texte lisible sur fond sélectionné */
+}
+
+QTreeView::item:hover {
+    background-color: #4fa377; /* Vert plus clair pour le survol */
+}
+</string>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <attribute name="headerVisible">
+              <bool>false</bool>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="PlayerRoom" name="widgetPlayRoom"/>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="2">
+     <widget class="QWidget" name="widgetBackgroundRounded" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#widgetBackgroundRounded {
+    background: rgba(58, 135, 94, 80); /* Couleur vert semi-transparent (#3a875e) */
+    border: none;                       /* Pas de bordure */
+    border-radius: 15px;                /* Coins arrondis */
+}
+</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QListView" name="listView">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QListView {
+    background: rgba(255, 45, 45, 0); /* Fond semi-transparent */
+    border: none;                     /* Pas de bordure */
+    border-radius: 10px;              /* Coins arrondis */
+    padding: 5px;                     /* Espacement interne */
+}
+
+QListView::item {
+    background: rgba(255, 255, 255, 150); /* Fond semi-transparent pour chaque item */
+    border: 1px solid rgba(220, 220, 220, 150); /* Bordure semi-transparente */
+    border-radius: 8px;                 /* Coins arrondis pour chaque item */
+    margin: 5px;                        /* Espacement entre les items */
+    padding: 8px;                       /* Espacement interne */
+    color: #e0e0e0;                     /* Texte clair */
+}
+
+QListView::item:selected {
+    background: rgba(70, 130, 180, 200); /* Bleu semi-transparent pour l'élément sélectionné */
+    border: 1px solid rgba(30, 144, 255, 200); /* Bordure bleue semi-transparente */
+    border-radius: 8px; /* Coins arrondis pour l'élément sélectionné */
+    color: white; /* Texte blanc */
+}
+
+QListView::item:hover {
+    background: rgba(240, 240, 240, 150); /* Fond gris clair semi-transparent pour le survol */
+    border: 1px solid rgba(200, 200, 200, 150); /* Bordure semi-transparente */
+    border-radius: 8px; /* Coins arrondis pour l'élément survolé */
+}
+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlayerRoom</class>
+   <extends>QWidget</extends>
+   <header>playerroom.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StatusWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/statuswidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="ressources/ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
